@@ -151,4 +151,42 @@ $(function() {
 	    	$this.attr('data-original-title', '');
 	    }
 	});
+
+
+
+	// STICKY MENU
+	var nav = $('.menu_content');
+	if (nav.length) {
+		var contentNav = nav.offset().top - 0
+
+		var stickyNav = function(){
+			var scrollTop = $(window).scrollTop();
+
+			if (scrollTop > contentNav) {
+				$('.menu_content').addClass('fixed-nav');
+				$('.show_process_wrapper').css({
+					"margin-top" : "132px"
+				});
+			} else {
+				$('.menu_content').removeClass('fixed-nav');
+				$('.show_process_wrapper').css({
+					"margin-top" : "70px"
+				});
+			}
+		};
+		stickyNav();
+		$(window).scroll(function() {
+			stickyNav();
+		});
+	}
+
+	// ANIMATE SCROLL
+	$(function() {
+		$('.menu_content ul a').click(function(){
+		    $('html, body').animate({
+		        scrollTop: $( $.attr(this, 'href') ).offset().top - 62
+		    }, 700);
+		    return false;
+		});
+	});
 });
