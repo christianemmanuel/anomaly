@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Anomaly Detection</title>
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" type="images/png" href="images/favicon.jpg"> -->
+    
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="css/reset.css?v=1.2">
+    <!-- Bootstrap CSS framework -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css?v=1.2">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css?v=1.2">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="main_nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Trend Micro Logo">
+                <span>Anomaly Detection</span>
+            </a>
+
+            <ul>
+                <li class="dropdown">
+                    <a href="#">
+                        <img class="responsive-img" src="images/user_placeholder.png" alt="User placeholder"> 
+                        <span class="name">ian concepcion</span>
+                    </a>
+                    <ul class="children">
+                        <li><a href="#">User management</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Sign out</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="#" class="btn btn-red">Sign Up</a></li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main_wrapper">
+        <div class="sidebar-content">
+            <div class="sidebar-nav">
+                <div class="main-sidenav">
+                    <ul>
+                        <li><a href="file-upload.html"><i class="fa fa-upload"></i>file upload</a></li>
+                        <li><a href="upload-record.html"><i class="fa fa-files-o"></i>upload record</a></li>
+                        <li><a href="model-manager.html"><i class="fa fa-gears"></i>model manager</a></li>
+                        <li><a href="record-history.html"><i class="fa fa-file-text-o"></i>Record History</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_container">
+
+            <div class="model_survey_section">
+                <div class="trainNewModel_wrapper">
+                    <h4 class="header">Model Manager</h4>
+                    <p>Model manager is an type of model this will generate after upload the file once the file uploaded you can able to edit the name and description.</p>
+                </div>
+
+                <form action="">
+                    
+                    <div class="alert alert-success none" role="alert">
+                      <strong>Successfuly</strong> Updated!
+                    </div>
+                    <div class="global-table">
+                        <table class="table table-striped example_datatable1">
+                          <thead>
+                            <tr>
+                              <th>Model Name</th>
+                              <th>Time Created(UTC)</th>
+                              <th>Model Description</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><span class="model_name"><input type="text" value="Default Model Name 1"> <i class="fa fa-pencil"></i></span></td>
+                              <th>1/18/18 9:46AM</th>
+                              <td><span class="model_name"><input type="text" value="Description example in this field"> <i class="fa fa-pencil"></i></span></td>
+                              <td><a href="javascript:void(0)" class="edit_tbl">Edit</a></td>
+                            </tr>
+                            <tr>
+                              <td><span class="model_name"><input type="text" value="Default Model Name 2"> <i class="fa fa-pencil"></i></span></td>
+                              <th>1/18/18 9:50AM</th>
+                              <td><span class="model_name"><input type="text" value=""> <i class="fa fa-pencil"></i></span></td>
+                              <td><a href="javascript:void(0)" class="edit_tbl">Edit</a></td>
+                            </tr>
+                            <tr>
+                              <td><span class="model_name"><input type="text" value="Default Model Name 3"> <i class="fa fa-pencil"></i></span></td>
+                              <th>1/19/18 10:46AM</th>
+                              <td><span class="model_name"><input type="text" value=""> <i class="fa fa-pencil"></i></span></td>
+                              <td><a href="javascript:void(0)" class="edit_tbl">Edit</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+
+                    <div class="cta_actions">
+                        <button class="btn btn-big btn-blue" id="update_modelManager">UPDATE</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="progressbar_wrapper none">
+                <span>Scanning...</span>
+                <div class="progress">
+                  <!-- style="width: 67%;" --> 
+                  <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><!-- 67% --></div>
+                </div>
+
+                <div class="step_msg_wrapper">
+                    <h3>Step 1 </h3>
+                    <p><strong>Scanning  CSV file.</strong> The system now will scanning the csv file. It takes a several minute to analyze the files</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/script.js?v=1.2"></script>
+</body>
+</html>
+
+   

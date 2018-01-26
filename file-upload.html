@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Anomaly Detection</title>
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" type="images/png" href="images/favicon.jpg"> -->
+    
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="css/reset.css?v=1.2">
+    <!-- Bootstrap CSS framework -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css?v=1.2">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css?v=1.2">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="main_nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Trend Micro Logo">
+                <span>Anomaly Detection</span>
+            </a>
+
+            <ul>
+                <li class="dropdown">
+                    <a href="#">
+                        <img class="responsive-img" src="images/user_placeholder.png" alt="User placeholder"> 
+                        <span class="name">ian concepcion</span>
+                    </a>
+                    <ul class="children">
+                        <li><a href="#">User management</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Sign out</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="#" class="btn btn-red">Sign Up</a></li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main_wrapper">
+        <div class="sidebar-content">
+            <div class="sidebar-nav">
+                <div class="main-sidenav">
+                    <ul>
+                        <li><a href="file-upload.html"><i class="fa fa-upload"></i>file upload</a></li>
+                        <li><a href="upload-record.html"><i class="fa fa-files-o"></i>upload record</a></li>
+                        <li><a href="model-manager.html"><i class="fa fa-gears"></i>model manager</a></li>
+                        <li><a href="record-history.html"><i class="fa fa-file-text-o"></i>Record History</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_container">
+ 
+            <div class="file_upload_section">
+                <div class="alert alert-info alert-count alert-dismissible fade show" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Total Record:</strong> 398,989,505/400,000,000
+                </div>
+
+                <form action="?">
+                    <div class="zone">
+                        <div class="fileUpload_heading">
+                            <h3>File Upload</h3>
+                            <p>Upload your file and we'll get it done.</p>
+                        </div>
+
+                        <div id="dropZ">
+                            <i class="fa fa-cloud-upload"></i>
+                            <div>Drag and drop your file here</div>                    
+                            <span>OR</span>
+                            <div class="selectFile">       
+                                <label for="file">Select file</label>                   
+                                <input type="file" name="files" id="file">
+                            </div>
+                            <p>File size limit : 1 GB</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="progressbar_wrapper none">
+                <span>File Uploading...</span>
+                <div class="progress">
+                  <!-- style="width: 67%;" --> 
+                  <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><!-- 67% --></div>
+                </div>
+
+                <div class="step_msg_wrapper">
+                    <p><strong>File Uploading</strong> is the transmission of a file from one computer system to another, usually larger computer system. From a network user's point-of-view, to upload a file is to send it to another computer that is set up to receive it.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/script.js?v=1.2"></script>
+</body>
+</html>
+
+   
