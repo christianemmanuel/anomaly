@@ -734,6 +734,10 @@ input[type="checkbox"] {
 .main_nav ul li a.btn-red {
     color: #ffffff;
 }
+.main_nav ul li a:hover {
+    text-decoration: none;
+    color: #d54b4b;
+}
 /* .main_nav ul li a:not(.btn-red):hover,
 .main_nav ul li a:not(.btn-red):focus {
     color: #db3d43;
@@ -1776,10 +1780,10 @@ header .landing_page_header_container .shadow:after {
     color: #e03e38;
 }
 .swap_right_col {
-    left: 50%;
+    left: 47%;
 }
 .swap_left_col {
-    left: -50%;
+    left: -53%;
 }
 .landing_text_content {
     padding: 50px;
