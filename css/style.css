@@ -1813,6 +1813,9 @@ header .landing_page_header_container .shadow:after {
 .flex_child.flex_xs_grid_2_12.img_text_content {
     width: 53%;
 }
+.flex_child.flex_xs_grid_2_12.img_text_content img {
+    width: 100%;
+}
 .flex_child.flex_xs_grid_2_12.landing_text_wrapper {
     width: 47%;
 }
