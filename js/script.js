@@ -42,17 +42,24 @@ $(function() {
 	    tmpval = $(this).val();
 	    if(tmpval == '') {
 	    } else {
-	        // $(this).addClass('not-empty').parents('.file_upload_section').hide().next('.progressbar_wrapper').fadeIn().find('.progress-bar').addClass('animate_bar');
-	        
-	        $(this).parents('.file_upload_section').find('button').removeAttr('disabled');
-	    	
-	        // setTimeout(function() {
-	        //    window.location.replace("model-survey.html");
-	        // }, 5600);
 
-	        var filename = $('#file').val();
-		    $('#select_file').append(filename);
+	        $(this).parents('.file_upload_section').find('button').removeAttr('disabled');
+
+		    var file = $('#file')[0].files[0]
+			if (file){
+			  $('#selected_file').html('('+file.name+')');
+			}
+
 	    }
+	});
+	// file-upload.html page action
+	$('button#proceed_file_upload').click(function() {
+		$(this).parents('.file_upload_section').hide().next('.progressbar_wrapper').fadeIn().find('.progress-bar').addClass('animate_bar');
+	    
+        setTimeout(function() {
+           window.location.replace("model-survey.html");
+        }, 5600);
+        return false;
 	});
 
 	$('#trainNewModel, button.decide').click(function() {
@@ -83,20 +90,12 @@ $(function() {
         }, 3000);
 		return false;
 	});
-	// $('.global-table input[type="text"]').focus(function(){
-	//     $(this).parents('.model_name').find('.fa').fadeIn('fast');
-	// }).blur(function() {
-	// 	$(this).parents('.model_name').find('.fa').fadeOut('fast');
-	// });
-
-
-
 
 	// Toggle Select All checkbox. all checkbox will checked
     $('.allcheckboxes1').click(function() {
         $(this).parents('.example_datatable').toggleClass('checkallbox');
         if ($('.example_datatable').hasClass('checkallbox')) {
-            $('.cta_actions').find('button').removeAttr('disabled');
+            $('.cta_action_innerWrapper').find('button#view_results').removeAttr('disabled');
             $('.example_datatable input[type="checkbox"]').prop('checked', true);
         } else {
             $('.example_datatable input[type="checkbox"]').prop('checked', true);
@@ -116,18 +115,11 @@ $(function() {
 
     $('.checkbox_dynamic input[type="checkbox"]').change(function(){
         if($(this).is(":checked")) {
-            $('.cta_actions').find('button').removeAttr('disabled');
+            $('.cta_action_innerWrapper').find('button#view_results').removeAttr('disabled');
         } else {
-            $('.cta_actions').find('button').attr('disabled');
+            $('.cta_action_innerWrapper').find('button#view_results').attr('disabled');
         }
     });
-
-    $('.dataTables_paginate').after($('.cta_actions'));
-
-    // $('.collapse').collapse({
-    // 	toggle: true
-    // });
-
 
 	 $(".collapse_all").click(function () {
         var text = $(this).html()
@@ -162,7 +154,7 @@ $(function() {
 	// STICKY MENU
 	var nav = $('.menu_content');
 	if (nav.length) {
-		var contentNav = nav.offset().top - 0
+		var contentNav = nav.offset().top - 62
 
 		var stickyNav = function(){
 			var scrollTop = $(window).scrollTop();
@@ -189,7 +181,7 @@ $(function() {
 	$(function() {
 		$('.menu_content ul a').click(function(){
 		    $('html, body').animate({
-		        scrollTop: $( $.attr(this, 'href') ).offset().top - 62
+		        scrollTop: $( $.attr(this, 'href') ).offset().top - 124
 		    }, 700);
 		    return false;
 		});

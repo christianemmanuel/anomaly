@@ -34,9 +34,8 @@
 
     <nav class="main_nav">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand">
                 <img src="images/logo.png" alt="Trend Micro Logo">
-                <span>Anomaly Detection</span>
             </a>
 
             <ul>
@@ -48,7 +47,7 @@
                     <ul class="children">
                         <li><a href="#">User management</a></li>
                         <li><a href="#">Settings</a></li>
-                        <li><a href="#">Sign out</a></li>
+                        <li><a href="login.html">Sign out</a></li>
                     </ul>
                 </li>
                 <!-- <li><a href="#" class="btn btn-red">Sign Up</a></li> -->
@@ -114,10 +113,10 @@
 
             <div class="model_survey_section">
                 <div class="trainNewModel_wrapper">
-                    <span class="file-name"><i class="fa fa-file-text"></i> Anomaly.csv</span>
+                    <!-- <span class="file-name"><i class="fa fa-file-text"></i> Anomaly.csv</span> -->
                     <p>Sytem found these matched models for you. You can use previous model below</p>
                     <span>or</span>
-                    <button id="trainNewModel" type="submit" class="btn btn-blue btn-big">TRAIN NEW MODEL</button> 
+                    <button id="trainNewModel" type="submit" class="btn btn-blue btn-big" data-toggle="tooltip" data-placement="right" title="By clicking this button you can create a new model for anamoly detection (example description)">TRAIN NEW MODEL</button> 
                 </div>
 
                 <form action="?">
@@ -136,24 +135,58 @@
                             <tr>
                               <td>Default Model Name 1</td>
                               <td>1/18/18 9:46AM</td>
-                              <td><span class="ellipsis" data-toggle="tooltip" data-placement="bottom">This description are demo for long characters. You will read more by hovering using this tooltip.</span></td>
-                              <td><button class="decide">Decide</button></td>
+                              <td><span class="ellipsis" data-toggle="tooltip" data-placement="bottom">This description demo for long characters. You will read more by hovering using this tooltip.</span></td>
+                              <td><button class="decide">Select</button></td>
                             </tr>
                             <tr>
                               <td>Default Model Name 2</td>
                               <td>1/18/18 9:50AM</td>
                               <td><span class="ellipsis" data-toggle="tooltip" data-placement="bottom">demo description</span></td>
-                              <td><button class="decide">Decide</button></td>
+                              <td><button class="decide">Select</button></td>
                             </tr>
                             <tr>
                               <td>Default Model Name 3</td>
                               <td>1/19/18 10:46AM</td>
                               <td><span class="ellipsis" data-toggle="tooltip" data-placement="bottom">demo description</span></td>
-                              <td><button class="decide">Decide</button></td>
+                              <td><button class="decide">Select</button></td>
                             </tr>
                           </tbody>
                         </table>
                     </div>
+
+                    <div class="cta_action_innerWrapper cta_action_content">
+                        <div class="pull-left">
+                          <a href="file-upload.html" class="btn btn-big">GO BACK</a>
+                          <span>or</span>
+                          <a href="start-anomaly-detection.html" class="btn-link" data-toggle="modal" data-target="#cancel_anomaly">Cancel</a>
+                        </div>
+                    </div>
+
+
+                     <!-- Modal for cancel anamoly process-->
+                    <div class="modal fade" id="cancel_anomaly">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                        
+                          <div class="modal-header">
+                            <h4 class="modal-title">Warning!</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          </div>
+                          
+                          <!-- Modal body -->
+                          <div class="modal-body">
+                            <p>If you cancel this process you will back to zero</p>
+                          </div>
+
+                          <div class="modal-footer">
+                            <a href="start-anomaly-detection.html" class="btn btn-red">Proceed Cancel</a>
+                            <button type="button" class="btn btn-blue" data-dismiss="modal">Close</button>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+
                 </form>
             </div>
 
