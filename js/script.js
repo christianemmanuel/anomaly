@@ -38,15 +38,20 @@ $(function() {
 	    "ordering": false
 	});
 
-	$('input#file').blur(function(){
+	$('input#file').change(function(){
 	    tmpval = $(this).val();
 	    if(tmpval == '') {
 	    } else {
-	        $(this).addClass('not-empty').parents('.file_upload_section').hide().next('.progressbar_wrapper').fadeIn().find('.progress-bar').addClass('animate_bar');
-	    
-	        setTimeout(function() {
-	           window.location.replace("model-survey.html");
-	        }, 5600);
+	        // $(this).addClass('not-empty').parents('.file_upload_section').hide().next('.progressbar_wrapper').fadeIn().find('.progress-bar').addClass('animate_bar');
+	        
+	        $(this).parents('.file_upload_section').find('button').removeAttr('disabled');
+	    	
+	        // setTimeout(function() {
+	        //    window.location.replace("model-survey.html");
+	        // }, 5600);
+
+	        var filename = $('#file').val();
+		    $('#select_file').append(filename);
 	    }
 	});
 
@@ -188,5 +193,9 @@ $(function() {
 		    }, 700);
 		    return false;
 		});
+	});
+
+	$('.hide_navigation').click(function() {
+		$('body').toggleClass('hide_sidebar_wrapper');
 	});
 });
