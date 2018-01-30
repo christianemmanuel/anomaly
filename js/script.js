@@ -161,13 +161,13 @@ $(function() {
 
 			if (scrollTop > contentNav) {
 				$('.menu_content').addClass('fixed-nav');
-				$('.show_process_wrapper').css({
-					"margin-top" : "132px"
+				$('.homepage_arrow').css({
+					"padding-top" : "132px"
 				});
 			} else {
 				$('.menu_content').removeClass('fixed-nav');
-				$('.show_process_wrapper').css({
-					"margin-top" : "70px"
+				$('.homepage_arrow').css({
+					"padding-top" : "70px"
 				});
 			}
 		};
@@ -179,9 +179,9 @@ $(function() {
 
 	// ANIMATE SCROLL
 	$(function() {
-		$('.menu_content ul a').click(function(){
+		$('.menu_content ul a, .homepage_arrow a').click(function(){
 		    $('html, body').animate({
-		        scrollTop: $( $.attr(this, 'href') ).offset().top - 124
+		        scrollTop: $( $.attr(this, 'data-href') ).offset().top - 124
 		    }, 700);
 		    return false;
 		});
