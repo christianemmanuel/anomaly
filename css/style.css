@@ -649,6 +649,9 @@ input[type="submit"].btn-blue:hover,
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     margin: 55px auto;
 }
+.anomalyDetection_login .cta_action_wrapper .btn:active {
+    height: 44px !important;
+}
 .login_heading {
     margin-bottom: 25px;
 }
@@ -1759,20 +1762,37 @@ span.rank {
 }
 .table_connected_body .nav-link {
     text-transform: uppercase;
-    border: none;
-    border-bottom: 3px solid transparent;
+    border: 1px solid #cec6c6;
+    border-bottom: none;
     font-weight: 700;
-    color: #8c8b8b;
+    color: #333333;
     font-size: 15px;
-    padding: .5em .77em;
+    padding: 13px;
+    background: #e2dddd;
+    border-radius: 0;
+    line-height: 1em;
+    position: relative;
 }
 .table_connected_body .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    background: transparent;
-    border: none;
-    border-bottom: 3px solid #e03e38;
+    background: #ffffff;
+    border-radius: 0 !important;
+}
+.nav-tabs .nav-link.active:before,
+.nav-tabs .nav-link:hover::before  {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #f1554f;
+    top: -4px;
+    left: 0;
+    transition: all ease-in-out 200ms;
 }
 .table_connected_body .nav-tabs {
     margin-bottom: 20px;
+    margin-top: 10px;
+    border-bottom: 1px solid #e2dddd;
 }
 .table_connected_wrapper {
     position: relative;
