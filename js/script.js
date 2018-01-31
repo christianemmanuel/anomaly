@@ -152,30 +152,30 @@ $(function() {
 
 
 	// STICKY MENU
-	var nav = $('.menu_content');
-	if (nav.length) {
-		var contentNav = nav.offset().top - 62
+	// var nav = $('.menu_content');
+	// if (nav.length) {
+	// 	var contentNav = nav.offset().top - 62
 
-		var stickyNav = function(){
-			var scrollTop = $(window).scrollTop();
+	// 	var stickyNav = function(){
+	// 		var scrollTop = $(window).scrollTop();
 
-			if (scrollTop > contentNav) {
-				$('.menu_content').addClass('fixed-nav');
-				$('.homepage_arrow').css({
-					"padding-top" : "132px"
-				});
-			} else {
-				$('.menu_content').removeClass('fixed-nav');
-				$('.homepage_arrow').css({
-					"padding-top" : "70px"
-				});
-			}
-		};
-		stickyNav();
-		$(window).scroll(function() {
-			stickyNav();
-		});
-	}
+	// 		if (scrollTop > contentNav) {
+	// 			$('.menu_content').addClass('fixed-nav');
+	// 			$('.homepage_arrow').css({
+	// 				"padding-top" : "132px"
+	// 			});
+	// 		} else {
+	// 			$('.menu_content').removeClass('fixed-nav');
+	// 			$('.homepage_arrow').css({
+	// 				"padding-top" : "70px"
+	// 			});
+	// 		}
+	// 	};
+	// 	stickyNav();
+	// 	$(window).scroll(function() {
+	// 		stickyNav();
+	// 	});
+	// }
 
 	// ANIMATE SCROLL
 	$(function() {

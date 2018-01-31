@@ -2105,6 +2105,7 @@ header .landing_page_header_container .shadow:after {
 }
 .disclaimer_section {
     background-color: #105c6c;
+    border-bottom: 2px solid #0a4652;
     padding: 80px 0;
     text-align: center;
     background-image: url(../images/squares-alt.svg);
@@ -2124,7 +2125,6 @@ header .landing_page_header_container .shadow:after {
 }
 .copyright {
     background-color: #105b6b;
-    border-top: 2px solid #0a4652;
     padding: 28px 0 27px 0;
     display: inline-block;
     width: 100%;
