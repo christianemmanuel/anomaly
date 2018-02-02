@@ -1936,8 +1936,8 @@ header.landing_page_header {
     background-image: url(../images/bg-bot.png);
     background-repeat: no-repeat;
     background-color: #e03e38;
-    background-size: 685px;
-    background-position: bottom right;
+    background-size: 800px;
+    background-position: bottom right -22px;
     overflow: hidden;
 }
 header .landing_page_header_container h5,
@@ -1977,9 +1977,9 @@ header .landing_page_header_container .shadow:after {
     position: absolute;
     display: block;
     content: '';
-    width: 45px;
+    width: 39px;
     height: 100%;
-    right: -47px;
+    right: -41px;
     top: 0;
     background-color: #e03e38;
     transform: skewX(38deg);
