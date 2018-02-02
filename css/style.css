@@ -685,7 +685,7 @@ input[type="submit"].btn-blue:hover,
     float: left;
 }
 .main_nav a.navbar-brand img {
-    max-width: 125px;
+    max-width: 133px;
     height: 35px;
     float: left;
     padding-right: 10px !important;
@@ -1936,8 +1936,8 @@ header.landing_page_header {
     background-image: url(../images/bg-bot.png);
     background-repeat: no-repeat;
     background-color: #e03e38;
-    background-size: 800px;
-    background-position: bottom right -22px;
+    background-size: 700px;
+    background-position: bottom right 30px;
     overflow: hidden;
 }
 header .landing_page_header_container h5,
