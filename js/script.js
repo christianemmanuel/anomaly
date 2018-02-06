@@ -135,7 +135,7 @@ $(function() {
 
 
 //////////////////////////////////////////////////////////////////////////////
-/////////////////////////////// //////////// //////////////////////////////
+///////////////////////// CODE THAT WE NEED NOT DEMO /////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 $(function() {
 	// Show in tooltip when the description are long characters
@@ -149,7 +149,10 @@ $(function() {
 	    }
 	});
 
-
+	// Hide sidebar
+	$('.hide_navigation').click(function() {
+		$('body').toggleClass('hide_sidebar_wrapper');
+	});
 
 	// STICKY MENU
 	var nav = $('.menu_content');
@@ -178,16 +181,26 @@ $(function() {
 	}
 
 	// ANIMATE SCROLL
-	$(function() {
-		$('.menu_content ul a, .homepage_arrow a').click(function(){
-		    $('html, body').animate({
-		        scrollTop: $( $.attr(this, 'data-href') ).offset().top - 124
-		    }, 700);
-		    return false;
-		});
-	});
+	$('.menu_content ul a').bind('click', function(e) {
+		var target = $(this).attr("data-href");
+		$('html, body').stop().animate({
+			scrollTop: $(target).offset().top - 124
+		}, 600);
 
-	$('.hide_navigation').click(function() {
-		$('body').toggleClass('hide_sidebar_wrapper');
+		e.preventDefault();
 	});
+    
 });
+
+$(window).scroll(function() {
+	var scrollDistance = $(window).scrollTop();
+
+	$('.section_landing_page').each(function(i) {
+		if ($(this).position().top - 62 <= scrollDistance) {
+			$('.menu_content ul a.active').removeClass('active');
+			$('.menu_content ul a').eq(i).addClass('active');
+		} else {
+			$('.menu_content ul a').eq(i).removeClass('active');
+		}
+	});
+}).scroll();

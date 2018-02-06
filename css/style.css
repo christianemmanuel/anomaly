@@ -1756,6 +1756,7 @@ span.rank {
     background-color: #f8fdff;
     padding: 10px 20px 20px 20px;
     border: 1px solid #dddddd;
+    /* display: none; */
 }
 .table_connected_body .tab-content>.tab-pane.fade.in.active {
     opacity: 1;
@@ -2096,7 +2097,8 @@ header .landing_page_header_container .shadow:after {
     height: 62px;
     border-right: 1px solid #e8e5e5;
 }
-.menu_content ul li a:hover {
+.menu_content ul li a:hover,
+.menu_content ul li a.active {
     background: #329ac6;
     color: #ffffff !important;
 }
