@@ -83,7 +83,7 @@
             </div>
 
             <div class="bottom_nav">
-              <a class="hide_navigation">Hide Menu <i class="fa fa-angle-double-left"></i></a>
+              <a class="hide_navigation">Collapse Sidebar <i class="fa fa-angle-double-left"></i></a>
             </div>
         </div>
 
@@ -137,7 +137,7 @@
 
               <div class="table_result_wrapper">
                 <div class="table_connected_wrapper">
-                  <div class="table_connected_header">
+                  <div class="table_connected_header first-tab">
                     <h5><strong>Incident: 1,</strong> 2018-7-01 08:20:00PM ~ 2018-7-01 09:30:00PM</h5>
                   </div>
                   <div class="table_connected_body">
@@ -390,6 +390,11 @@
     <script src="js/jquery.dataTables.min.js"></script>
     <script src="js/dataTables.bootstrap4.min.js"></script>
     <script src="js/script.js?v=1.2"></script>
+    <script>
+      $(document).ready(function() {
+        $('.table_connected_header.first-tab').trigger('click');
+      });
+    </script>
 </body>
 </html>
 

@@ -1,7 +1,8 @@
 //////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// SCRIPT FOR DEMO ONLY////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
-$(function() {
+$(document).ready(function() {
+
 	$('[data-toggle="tooltip"]').tooltip();
 
 	$('.example_datatable').DataTable({
@@ -134,10 +135,27 @@ $(function() {
 });
 
 
+
+
 //////////////////////////////////////////////////////////////////////////////
 ///////////////////////// CODE THAT WE NEED NOT DEMO /////////////////////////
 //////////////////////////////////////////////////////////////////////////////
-$(function() {
+
+$(document).ready(function() {
+
+	$('.table_connected_header').click(function() {
+		if ($(this).parent().hasClass('active-tab')) {
+			$(this).next('.table_connected_body').slideUp();
+			$(this).parent().removeClass('active-tab');
+		} else {
+			$('.table_connected_header').not(this).next('.table_connected_body').slideUp('fast');
+        	$('.table_connected_header').parent().not(this).removeClass('active-tab');
+
+			$(this).next('.table_connected_body').slideDown();
+			$(this).parent().addClass('active-tab');
+		}
+	});
+
 	// Show in tooltip when the description are long characters
 	$('span.ellipsis').each(function(){
 	    var $this = $(this);
@@ -149,7 +167,7 @@ $(function() {
 	    }
 	});
 
-	// Hide sidebar
+	// SIDEBAR IN PROCESS PAGE (HIDE SIDEBAR)
 	$('.hide_navigation').click(function() {
 		$('body').toggleClass('hide_sidebar_wrapper');
 	});
@@ -180,7 +198,7 @@ $(function() {
 		});
 	}
 
-	// ANIMATE SCROLL
+	// ANIMATE SCROLL MENU
 	$('.menu_content ul a').bind('click', function(e) {
 		var target = $(this).attr("data-href");
 		$('html, body').stop().animate({
