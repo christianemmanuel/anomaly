@@ -199,7 +199,7 @@ $(document).ready(function() {
 	}
 
 	// ANIMATE SCROLL MENU
-	$('.menu_content ul a').bind('click', function(e) {
+	$('.menu_content ul a, .homepage_arrow a').bind('click', function(e) {
 		var target = $(this).attr("data-href");
 		$('html, body').stop().animate({
 			scrollTop: $(target).offset().top - 124

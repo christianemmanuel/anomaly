@@ -2202,6 +2202,9 @@ header .landing_page_header_container .shadow:after {
     padding: 70px 20px;
     background: #ffffff;
     text-align: center;
+    background-image: url(../images/solutions-hero-img.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .homepage_arrow img {
     margin: 0 auto;
