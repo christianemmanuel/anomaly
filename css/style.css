@@ -1955,10 +1955,11 @@ header.landing_page_header {
     padding-bottom: 50px;
     background-image: url(../images/bg-bot.png);
     background-repeat: no-repeat;
-    background-color: #e03e38;
-    background-size: 700px;
-    background-position: bottom right 30px;
+    background-color: #1f5e70;
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
+    height: 337px;
 } 
 header .landing_page_header_container h5,
 header .landing_page_header_container h2 {
@@ -1978,9 +1979,9 @@ header .landing_page_header_container .cta_wrapper {
 }
 header .landing_page_header_container .btn.btn-big {
     z-index: 1;
-    color: #d02d33;
+    color: #1b5465;
 }
-header .landing_page_header_container .shadow {
+/* header .landing_page_header_container .shadow {
     position: absolute;
     display: block;
     content: '';
@@ -2001,9 +2002,12 @@ header .landing_page_header_container .shadow:after {
     height: 100%;
     right: -41px;
     top: 0;
-    background-color: #e03e38;
+    background-color: #1f5e70;
+    -webkit-transform: skewX(38deg);
+    -moz-transform: skewX(38deg);
+    -o-transform: skewX(38deg);
     transform: skewX(38deg);
-}
+} */
 .tbl_headingInfo {
     padding-left: 31px;
     margin-bottom: 2px;
@@ -2077,6 +2081,27 @@ header .landing_page_header_container .shadow:after {
 .section_landing_page {
     background-color: #ffffff;
 }
+.landing_text_content h2,
+.landing_text_content h3,
+.landing_text_content p {
+    transition: all ease-in-out 200ms;
+    /* opacity: 0; */
+}
+/* .landing_text_content h2 {
+    transform: translate3d(100px, 0, 0);
+}
+.landing_text_content h3 {
+    transform: translate3d(150px, 0, 0);
+}
+.landing_text_content p {
+    transform: translate3d(200px, 0, 0);
+}
+.showdivivivi .landing_text_content h2,
+.showdivivivi .landing_text_content h3,
+.showdivivivi .landing_text_content p {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+} */
 .menu_content {
     text-align: center;
     /* margin-bottom: 70px; */
