@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 </head>
 <body>
 
@@ -78,6 +79,15 @@
                             <span class="text_nav"><i class="fa fa-file-text-o"></i>Record History</span>
                           </a>
                         </li>
+                         <li>
+                          <hr />
+                        </li>
+                        <li>
+                          <a href="file-upload.html">
+                            <span class="fa fa-arrow-circle-right fa-nav" data-toggle="tooltip" data-placement="right" title="Anomaly Detection"></span>
+                            <span class="text_nav"><i class="fa fa-arrow-circle-right "></i>Anomaly Detection</span>
+                          </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -87,34 +97,48 @@
             </div>
         </div>
 
-        <div class="main_container">
-            <div class="onboarding_steps">
-                <div class="onboarding_prog"></div>
+        <div class="main_container" id="onboarding__steps">
+          <div class="onboarding_steps">
+            <div class="onboarding_prog"></div>
                 <ul>
                 <li class="active">
                     <label>STEP 1</label>
                     <a href="#"></a>
-                    <span>Upload & Train</span>
+                    <span>Upload Server File</span>
+                </li>
+
+                <li class="active">
+                    <label>STEP 2</label>
+                    <a href="#"></a>
+                    <span>Train Model</span>
                 </li>
 
                 <li class="active active_step">
-                    <label>STEP 2</label>
+                    <label>STEP 3</label>
                     <a href="#"></a>
-                    <span>Result Review</span>
+                    <span>Analyze and Detect</span>
                 </li>
 
                 <li class="">
-                    <label>STEP 3</label>
+                    <label>Finished</label>
                     <a href="#"></a>
-                    <span>Root cause analysis and report output.</span>
+                    <span>Review Analysis Report</span>
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+
+        <div class="main_container">
+            <div class="step__details">
+                <h3><strong>Step 3</strong> <i class="fa  fa-chevron-right"></i> Analyze and Detect</h3>
+                <p>Here are the enlisted incidents based from the trained model. Select <strong>All</strong> or <strong>choose</strong> which incidents you would want to analyze and detect and generate results.</p>
+            </div>
 
             <div class="model_survey_section">
-                <h3 class="header">Anomaly Result Review</h3>
                 <form action="">
                     <div class="global-table">
+                        <h5 class="table-heading">Results Review</h5>
                         <table class="table table-striped example_datatable">
                           <thead>
                             <tr>
@@ -234,7 +258,7 @@
                         </div>
 
                         <div class="pull-right">
-                          <button id="view_results" class="btn btn-big btn-blue" disabled>NEXT</button>
+                          <button id="view_results" class="btn btn-big btn-blue" disabled>Generate Results &nbsp; <i class="fa  fa-chevron-right"></i></button>
                         </div>
                     </div>
 
@@ -273,8 +297,11 @@
                 </div>
 
                 <div class="step_msg_wrapper">
-                    <h3>Step 2 </h3>
-                    <p><strong>Result Review</strong> The system now reviewing your file you can see list of Anomaly Detected Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, eius.</p>
+                    <p>Finalizing the analysis review report...</p>
+                </div>
+
+                <div class="step__details next-step">
+                    <h3><strong>Last Step</strong> <i class="fa fa-chevron-right"></i>  Review Analysis Report</h3>
                 </div>
             </div>
 

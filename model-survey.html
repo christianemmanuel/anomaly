@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 </head>
 <body>
 
@@ -78,6 +79,15 @@
                             <span class="text_nav"><i class="fa fa-file-text-o"></i>Record History</span>
                           </a>
                         </li>
+                         <li>
+                          <hr />
+                        </li>
+                        <li>
+                          <a href="file-upload.html">
+                            <span class="fa fa-arrow-circle-right fa-nav" data-toggle="tooltip" data-placement="right" title="Anomaly Detection"></span>
+                            <span class="text_nav"><i class="fa fa-arrow-circle-right "></i>Anomaly Detection</span>
+                          </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -87,36 +97,49 @@
             </div>
         </div>
 
-        <div class="main_container">
-            <div class="onboarding_steps">
-                <div class="onboarding_prog"></div>
+        <div class="main_container" id="onboarding__steps">
+       <div class="onboarding_steps">
+            <div class="onboarding_prog"></div>
                 <ul>
-                <li class="active active_step">
+                <li class="active">
                     <label>STEP 1</label>
                     <a href="#"></a>
-                    <span>Upload & Train</span>
+                    <span>Upload Server File</span>
                 </li>
 
-                <li class="">
+                <li class="active active_step">
                     <label>STEP 2</label>
                     <a href="#"></a>
-                    <span>Result Review</span>
+                    <span>Train Model</span>
                 </li>
 
                 <li class="">
                     <label>STEP 3</label>
                     <a href="#"></a>
-                    <span>Root cause analysis and report output.</span>
+                    <span>Analyze and Detect</span>
+                </li>
+
+                <li class="">
+                    <label>Finished</label>
+                    <a href="#"></a>
+                    <span>Review Analysis Report</span>
                 </li>
               </ul>
+            </div>
+        </div>
+
+        <div class="main_container">
+
+            <div class="step__details">
+                <h3><strong>Step 2</strong> <i class="fa  fa-chevron-right"></i> Train Model</h3>
+                <p>Train a new model for this file or select from previous models. By creating a new model, you can customize their analysis result. To select from previous models, click <strong>Select</strong> to continue anomaly detection.</p>
             </div>
 
             <div class="model_survey_section">
                 <div class="trainNewModel_wrapper">
                     <!-- <span class="file-name"><i class="fa fa-file-text"></i> Anomaly.csv</span> -->
-                    <p>Sytem found these matched models for you. You can use previous model below</p>
-                    <span>or</span>
-                    <button id="trainNewModel" type="submit" class="btn btn-blue btn-big" data-toggle="tooltip" data-placement="right" title="By clicking this button you can create a new model for anamoly detection (example description)">TRAIN NEW MODEL</button> 
+                    <p>
+                    We have found these matched models for you. You can use previous model below or <strong>Train New Model</strong>.</p>
                 </div>
 
                 <form action="?">
@@ -158,9 +181,15 @@
                         <div class="pull-left">
                           <a href="file-upload.html" class="btn btn-big">GO BACK</a>
                           <span>or</span>
-                          <a href="start-anomaly-detection.html" class="btn-link" data-toggle="modal" data-target="#cancel_anomaly">Cancel</a>
+                          <a href="start-anomaly-detection.html" class="btn-link" data-toggle="modal" data-target="#cancel_anomaly" style="text-transform: unset">Cancel</a>
                         </div>
+
+                        <div class="pull-right">
+                          <button  id="trainNewModel" type="submit" class="btn btn-blue btn-big" data-toggle="tooltip" data-placement="left" title="CLick here to proceed to next step using a new model. You can also choose existing models above.">Train New Model &nbsp; <i class="fa  fa-chevron-right"></i></button>
+                      </div>
                     </div>
+
+
 
 
                      <!-- Modal for cancel anamoly process-->
@@ -198,10 +227,14 @@
                 </div>
 
                 <div class="step_msg_wrapper">
-                    <h3>Step 1 </h3>
-                    <p><strong>Upload & Train.</strong> The system now will scanning the file. It takes a several minute to analyze the files don't close this windows.</p>
+                    <p>Scanning your server file...</p>
+                </div>
+
+                <div class="step__details next-step">
+                    <h3><strong>Next Step</strong> <i class="fa fa-chevron-right"></i>  Analyze and Detect</h3>
                 </div>
             </div>
+
 
         </div>
     </div>

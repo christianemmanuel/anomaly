@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 </head>
 <body>
 
@@ -78,6 +79,15 @@
                             <span class="text_nav"><i class="fa fa-file-text-o"></i>Record History</span>
                           </a>
                         </li>
+                         <li>
+                          <hr />
+                        </li>
+                        <li>
+                          <a href="file-upload.html">
+                            <span class="fa fa-arrow-circle-right fa-nav" data-toggle="tooltip" data-placement="right" title="Anomaly Detection"></span>
+                            <span class="text_nav"><i class="fa fa-arrow-circle-right "></i>Anomaly Detection</span>
+                          </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -87,45 +97,62 @@
             </div>
         </div>
 
-        <div class="main_container">
+        <div class="main_container" id="onboarding__steps">
             <div class="onboarding_steps">
                 <div class="onboarding_prog"></div>
                 <ul>
                 <li class="active active_step">
                     <label>STEP 1</label>
                     <a href="#"></a>
-                    <span>Upload & Train</span>
+                    <span>Upload Server File</span>
                 </li>
 
                 <li class="">
                     <label>STEP 2</label>
                     <a href="#"></a>
-                    <span>Result Review</span>
+                    <span>Train Model</span>
                 </li>
 
                 <li class="">
                     <label>STEP 3</label>
                     <a href="#"></a>
-                    <span>Root cause analysis and report output.</span>
+                    <span>Analyze and Detect</span>
+                </li>
+
+                <li class="">
+                    <label>Finished</label>
+                    <a href="#"></a>
+                    <span>Review Analysis Report</span>
                 </li>
               </ul>
             </div>
+        </div>
+
+        <div class="main_container">
+
+            <div class="step__details">
+                <h3><strong>Step 1</strong> <i class="fa  fa-chevron-right"></i> Upload Server File</h3>
+                <p>Upload your server file for anomaly detection analysis. </p>
+            </div>
             
             <div class="file_upload_section">
-                <div class="alert alert-info alert-count alert-dismissible fade show" role="alert">
+ <!--                <div class="alert alert-info alert-count alert-dismissible fade show" role="alert">
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                   <strong>Total Record:</strong> 398,989,505/400,000,000
+                </div> -->
+            <div class="cta_action_innerWrapper" id="cta_action_innerWrapper">
+                <div class="pull-left">
+                  <a href="start-anomaly-detection.html" class="btn btn-big">GO BACK</a>
                 </div>
-
+                
+                <div class="pull-right">
+                    <button id="proceed_file_upload" tye="submit" class="btn btn-blue btn-big" >Next Step &nbsp; <i class="fa  fa-chevron-right"></i></button>
+                </div>
+            </div>
                 <form action="?">
                     <div class="zone">
-                        <div class="fileUpload_heading">
-                            <h3>File Upload</h3>
-                            <p>Upload your file and we'll get it done.</p>
-                        </div>
-
                         <div id="dropZ">
                             <i class="fa fa-cloud-upload"></i>
                             <div>Drag and drop your file here</div>                    
@@ -138,29 +165,27 @@
                         </div>
                     </div>
 
-                    <div class="cta_action_innerWrapper" id="cta_action_innerWrapper">
-                        <div class="pull-left">
-                          <a href="start-anomaly-detection.html" class="btn btn-big">GO BACK</a>
-                        </div>
-                        
-                        <div class="pull-right">
-                            <button id="proceed_file_upload" tye="submit" class="btn btn-blue btn-big" disabled>NEXT</button>
-                        </div>
-                    </div>
+
                 </form>
             </div>
 
+
+
             <div class="progressbar_wrapper none">
-                <span>File Uploading...</span>
                 <div class="progress">
                   <!-- style="width: 67%;" --> 
                   <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><!-- 67% --></div>
                 </div>
 
                 <div class="step_msg_wrapper">
-                    <p><strong>File Uploading</strong> is the transmission of a file from one computer system to another, usually larger computer system. From a network user's point-of-view, to upload a file is to send it to another computer that is set up to receive it.</p>
+                    <p>Uploading your files in a moment...</p>
+                </div>
+                <div class="step__details next-step">
+                    <h3><strong>Next Step</strong> <i class="fa fa-chevron-right"></i>  Train Model</h3>
                 </div>
             </div>
+
+
 
         </div>
     </div>
