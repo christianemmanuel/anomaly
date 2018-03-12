@@ -183,12 +183,12 @@ $(document).ready(function() {
 			if (scrollTop > contentNav) {
 				$('.menu_content').addClass('fixed-nav');
 				$('.homepage_arrow').css({
-					"padding-top" : "132px"
+					"margin-top" : "55px"
 				});
 			} else {
 				$('.menu_content').removeClass('fixed-nav');
 				$('.homepage_arrow').css({
-					"padding-top" : "70px"
+					"margin-top" : "0"
 				});
 			}
 		};
